@@ -9,10 +9,13 @@ def printMatrix(matrix):
         print line
 
 def setup():
-    matrix = [[0,0,0],[0,0,0],[0,0,0]]
+    pass
+    
+def randomize():
+    matrix  = [[0,0,0],[0,0,0],[0,0,0]]
     numList = [1,2,3,4,5,6,7,8,9]
     
-    for i in range(9):
+    for i in range(3 ):
         for j in range(3):
             randomIndex = random.randrange(len(numList))
             matrix[i][j] = numList[randomIndex]
@@ -20,9 +23,9 @@ def setup():
             
             del numList[randomIndex]
             print 'setup() for1;for1 (len(numList))', len(numList)
-    print 'finished'
+    print 'finished', matrix
     
-    return random.shuffle(matrix)
+    return matrix
 
 def swap(attempts):
     #solves the riddle by replacing nearby values in the matrix
@@ -32,7 +35,7 @@ def swap(attempts):
     x = 0
     y = 0
     
-    print numList, matrix
+    print matrix
     printMatrix(matrix)
 
 
@@ -40,13 +43,13 @@ def guess(attempts):
     #solves the riddle by guessing the correct matrix 'attempts' amount of times
     
     matrix = setup()
+    for range(attemps):
+        matrix = setup()
     count = 0
     x = 0
     y = 0
     
-    print numList[0]
-    
-    print numList, matrix
+    print matrix
     printMatrix(matrix)
 
 
