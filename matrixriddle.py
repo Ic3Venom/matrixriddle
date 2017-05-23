@@ -8,14 +8,18 @@ def printMatrix(matrix):
     for line in matrix:
         print line
 
-def setup():
-    pass
+def verify(numList):
+    for i in range(3):
+        sum = 0
+        for j in range(3):
+            sum += numList[j]
+        print 'sum', sum
     
 def randomize():
     matrix  = [[0,0,0],[0,0,0],[0,0,0]]
     numList = [1,2,3,4,5,6,7,8,9]
     
-    for i in range(3 ):
+    for i in range(3):
         for j in range(3):
             randomIndex = random.randrange(len(numList))
             matrix[i][j] = numList[randomIndex]
@@ -30,7 +34,8 @@ def randomize():
 def swap(attempts):
     #solves the riddle by replacing nearby values in the matrix
 
-    matrix = setup()
+    matrix = None
+    exit(1)
     count = 0
     x = 0
     y = 0
@@ -43,7 +48,7 @@ def guess(attempts):
     #solves the riddle by guessing the correct matrix 'attempts' amount of times
     
     matrix = setup()
-    for range(attemps):
+    for i in range(attemps):
         matrix = setup()
     count = 0
     x = 0
